@@ -1,0 +1,20 @@
+{{>layout/header}}
+<div class="container">
+    <div class="row">
+        <div class="col-md text-center m-4">
+            <h1>StudyProject Main</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="d-grid gap-2 col-6 mx-auto">
+            {{#userName}}
+                <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+            {{/userName}}
+            {{^userName}}
+                <a href="/login" role="button" class="btn btn-primary btn-lg">Log in</a>
+                <a href="/signup" role="button" class="btn btn-secondary btn-lg">Sign up</a>
+            {{/userName}}
+        </div>
+    </div>
+</div>
+{{>layout/footer}}

@@ -1,0 +1,46 @@
+{{>layout/header}}
+<div class="container">
+    <div class="row">
+        <div class="col-md m-4 text-center">
+            <h1>Login</h1>
+        </div>
+    </div>
+    <form action="/login" method="post">
+        <div class="row justify-content-center mb-2">
+            <div class="col-md-4">
+                <label for="id" class="form-label">ID (Email address)</label>
+                <input type="email" class="form-control" name="id" id="id" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="row justify-content-center mb-2">
+            <div class="col-md-4">
+                <label for="pw" class="form-label">Password</label>
+                <input type="password" name="password" id="pw" class="form-control" aria-describedby="passwordHelpBlock">
+                <div id="passwordHelpBlock" class="form-text">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="d-grid gap-2 col-md-4 mx-auto">
+                <button type="submit" class="btn btn-primary btn-lg">Log in</button>
+                <a href="/signup" role="button" class="btn btn-secondary btn-lg">Sign up</a>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-4 text-center my-3 mx-auto">
+            <h4>Social Login</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 text-center mx-auto">
+        <a href="/oauth2/authorization/google"><img src="/images/btn_google_signin.png" width="250px" alt="googleLogin"></a>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-md-4 text-center mx-auto">
+            <a href="/oauth2/authorization/naver"><img src="/images/btn_login_naver.png" width=250px" alt="naverLogin"></a>
+        </div>
+    </div>
+</div>
+{{>layout/footer}}

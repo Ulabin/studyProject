@@ -1,0 +1,58 @@
+{{>layout/header}}
+<style>
+    .profile-img{
+        height:150px;
+        width:150px;
+    }
+</style>
+<div class="container my-4">
+    <form action="/signup" method="post" id="signupForm">
+        <div class="row">
+            <div class="col-md text-center mb-4">
+                <h1>Sign up</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-5 text-center">
+                <img src="/images/icon_basic_user_profile.svg" id="profileImg" class="profile-img rounded-circle mx-auto d-block img-thumbnail" alt="">
+
+                <label role="button" for="profileImgInput" class="btn btn-link">Change profile picture</label>
+                <input type="file" accept="image/jpeg,image/png,image/jpg"
+                       id="profileImgInput" style="display:none;"/>
+                <input type="hidden" name="picture" id="profilePath"/>
+            </div>
+        </div>
+        <div class="row justify-content-center my-2">
+            <div class="col-md-5">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" id="name">
+            </div>
+        </div>
+        <div class="row justify-content-center my-2">
+            <div class="col-md-5">
+                <label for="id" class="form-label">Id (Email address)</label>
+                <input type="email" name="email" class="form-control" id="id" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="row justify-content-center my-2">
+            <div class="col-md-5">
+                <label for="pw" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="pw">
+            </div>
+        </div>
+        <div class="row justify-content-center my-2">
+            <div class="col-md-5">
+                <label for="confirmPw" class="form-label">Confirm Password</label>
+                <input type="password" id="confPw" class="form-control">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="d-grid gap-2 col-md-5 mx-auto">
+                <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg">Submit</button>
+                <button type="reset"  class="btn btn-secondary btn-lg">Reset</button>
+            </div>
+        </div>
+    </form>
+</div>
+{{>layout/footer}}
+<script src="/js/app/signup.js"></script>
